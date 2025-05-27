@@ -7,6 +7,9 @@ llama-server -hf bartowski/Llama-3.2-3B-Instruct-GGUF:Q8_0
 
 llama-server -hf bartowski/Llama-3.2-3B-Instruct-GGUF:Q8_0 -c 131072
 
+#embeddings:
+llama-server -hf CompendiumLabs/bge-base-en-v1.5-gguf
+
 curl localhost:8080/v1/models|jq .
 
 curl http://localhost:8080/v1/chat/completions \
